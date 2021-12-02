@@ -1,5 +1,6 @@
 import { ActionType } from "../action-types";
-import { Action, Todo } from "../actions";
+import { Action } from "../actions";
+import { Todo } from "../../models";
 
 interface TodosState {
   loading: boolean;

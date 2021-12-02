@@ -1,4 +1,5 @@
 import { ActionType } from "../action-types";
+import { Todo } from "../../models";
 
 interface FetchTodosAction {
   type: ActionType.FETCH_TODOS;
@@ -12,13 +13,6 @@ interface FetchTodosSuccessAction {
 interface FetchTodosErrorAction {
   type: ActionType.FETCH_TODOS_ERROR;
   payload?: string;
-}
-
-export interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
 }
 
 export type Action =
