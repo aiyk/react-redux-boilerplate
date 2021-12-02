@@ -4,3 +4,9 @@ export interface Todo {
   title: string;
   completed: boolean;
 }
+
+export interface TodosState {
+  loading: boolean;
+  error: string | null | undefined;
+  data: Todo[] | undefined;
+}

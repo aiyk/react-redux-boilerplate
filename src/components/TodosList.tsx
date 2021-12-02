@@ -1,15 +1,6 @@
-import { useEffect } from "react";
-import { useTypedSelector } from "../hooks/useTypedSelector";
-import { useActions } from "../hooks/useActions";
+import { TodosState } from "../models";
 
-const TodosList: React.FC = () => {
-  const { fetchTodos } = useActions();
-  const { data, error, loading } = useTypedSelector((state) => state.todos);
-
-  useEffect(() => {
-    fetchTodos();
-  }, []);
-
+const TodosList: React.FC<TodosState> = ({ data, error, loading }) => {
   return (
     <div>
       {error && <h3>{error}</h3>}
